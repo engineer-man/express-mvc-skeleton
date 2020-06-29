@@ -1,0 +1,23 @@
+version: '3'
+services:
+    app:
+        container_name: expressmvc_app
+        image: node:14.4.0
+        ports:
+            - "8000:8000"
+        volumes:
+            - ./:/opt/src
+        command: bash -c 'cd /opt/src && npm install && npm start'
+        environment:
+            APPENV: ${APPENV}
+    mysql:
+        container_name: expressmvc_mysql
+        image: mysql:8.0
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: testdb
+        command: --init-file /var/lib/init/sample_schema.sql
+        volumes:
+            - ./:/opt/src
+            - ./var/docker/mysql:/var/lib/mysql
+            - ./var/sample_schema.sql:/var/lib/init/sample_schema.sql

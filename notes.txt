@@ -1,0 +1,8 @@
+# start with
+sudo docker-compose up
+
+# open in browser
+http://127.0.0.1:8000
+
+# access db
+sudo docker-compose exec mysql mysql -uroot -proot

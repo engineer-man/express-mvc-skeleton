@@ -1,0 +1,4 @@
+package-lock.json
+node_modules
+var/docker/mysql/*
+!var/docker/mysql/.gitkeep
