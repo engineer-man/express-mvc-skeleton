@@ -25,4 +25,4 @@ services:
         container_name: expressmvc_redis
         image: redis:5.0.3
         volumes:
-            - ./docker/redis:/data
+            - ./var/docker/redis:/data
