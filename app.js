@@ -31,6 +31,7 @@ const home = require('./controllers/home');
 
 // your routes
 app.get('/', home.home); // routes url / to controllers/home.js home method
+app.get('/home', home.home); // routes url /home to controllers/home.js home method
 
 // start the app
 app.listen(8000, () => {});
