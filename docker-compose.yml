@@ -21,3 +21,8 @@ services:
             - ./:/opt/src
             - ./var/docker/mysql:/var/lib/mysql
             - ./var/sample_schema.sql:/var/lib/init/sample_schema.sql
+    redis:
+        container_name: expressmvc_redis
+        image: redis:5.0.3
+        volumes:
+            - ./docker/redis:/data
