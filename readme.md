@@ -5,6 +5,7 @@ good for somebody who isn't sure how it all fits together and needs a starting p
  * `express` for handling routes
  * `sequelize` as the database orm
  * `redis` for session store
+ * `webpack` for bundling frontend assets
 
 #### quickstart
 ```shell
@@ -25,6 +26,7 @@ docker-compose exec mysql mysql -uroot -proot
 #### outline of project structure
 ```
 |- controllers # these are for handling routes
+|- frontend    # contains js, jsx, less files to be bundled for the frontend
 |- models      # these are for accessing your db
 |- public      # all non-routes get served from here
 |- var         # variable data for variable purposes

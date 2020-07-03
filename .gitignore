@@ -4,3 +4,4 @@ var/docker/mysql/*
 !var/docker/mysql/.gitkeep
 var/docker/redis/*
 !var/docker/redis/.gitkeep
+public/main.bundle.js
